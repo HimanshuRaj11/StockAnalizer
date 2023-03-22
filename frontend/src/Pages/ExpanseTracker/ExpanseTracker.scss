@@ -1,0 +1,353 @@
+.TrackerContainer {
+    position: relative;
+    height: auto;
+    width: 100%;
+    top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .sidebar {
+        backdrop-filter: blur(5px);
+        height: 33em;
+        width: 20%;
+        padding: 20px 10px;
+        background-color: rgba(182, 179, 179, 0.274);
+        border-radius: 10px;
+        box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+        -webkit-box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+        -moz-box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+        .profile {
+            width: 100%;
+            height: 7em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .pic {
+                height: 90px;
+                width: 90px;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                overflow: hidden;
+                margin: 0 5px 0 0;
+                cursor: pointer;
+                img {
+                    object-fit: cover;
+                    height: 95px;
+                    width: 95px;
+                    padding: 0 9px 2px 0;
+                }
+            }
+            .intro {
+                margin-right: 5px;
+                h2 {
+                    cursor: pointer;
+                    font-weight: 600;
+                    color: rgb(3, 2, 97);
+                }
+                h3 {
+                    cursor: pointer;
+                    color: rgb(68, 86, 146);
+                }
+            }
+        }
+        .menu {
+            width: 100%;
+            .menuLists {
+                display: flex;
+                flex-direction: column;
+                .menuList {
+                    cursor: pointer;
+                    list-style: none;
+                    font-size: 18px;
+                    color: rgb(68, 86, 146);
+                    font-weight: 600;
+                    margin: 10px 5px;
+                    padding-left: 3px;
+                    border-left: 3px solid rgba(255, 255, 255, 0);
+
+                    &:hover {
+                        color: rgb(3, 2, 97);
+                        font-weight: 700;
+                        border-left: 3px solid rgb(3, 2, 97);
+                    }
+                }
+                .active {
+                    border-left: 3px solid rgb(3, 2, 97);
+                    color: rgb(3, 2, 97);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .mainBox {
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        height: 33em;
+        padding: 10px 10px;
+        width: 75%;
+        background-color: rgba(182, 179, 179, 0.274);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+        -webkit-box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+        -moz-box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+
+        .DashboadContainer {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            .left {
+                height: 33em;
+                width: 58%;
+                display: flex;
+                flex-direction: column;
+                h1 {
+                    font-weight: 900;
+                    color: rgb(3, 2, 97);
+                    letter-spacing: 2px;
+                    font-size: 45px;
+                    margin: -5px;
+                }
+                .chart {
+                    background-color: #ffffffc2;
+                    width: 95%;
+                    height: 15em;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                    cursor: pointer;
+                }
+                .transDetail {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    .total {
+                        cursor: pointer;
+                        margin: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        border-radius: 7px;
+                        background-color: #ffffffc2;
+                        border: 2px solid white;
+                        width: 40%;
+                        height: 6em;
+                        padding-left: 10px;
+                        h2 {
+                            color: rgb(3, 2, 97);
+                            // color: rgb(230, 31, 5);
+                            font-size: 25px;
+                            letter-spacing: 2px;
+                        }
+                        div {
+                            word-spacing: 5px;
+                            color: rgb(68, 86, 146);
+                            font-size: 50px;
+                        }
+                    }
+                }
+            }
+            .right {
+                width: 38%;
+                height: 33em;
+            }
+        }
+    }
+}
+.IncomContainer {
+    h1 {
+        font-weight: 900;
+        color: rgb(3, 2, 97);
+        letter-spacing: 2px;
+        font-size: 45px;
+        margin: -5px 5px;
+    }
+    .heading {
+        cursor: pointer;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        background-color: #ffffffc2;
+        border: 2px solid white;
+        width: 95%;
+        height: 3em;
+        span {
+            font-weight: 1000;
+            font-size: 35px;
+            letter-spacing: 2px;
+        }
+    }
+    .mainCont {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        .left {
+            max-height: 23em;
+            width: 30%;
+            display: flex;
+            padding: 2px 30px;
+            flex-direction: column;
+
+            input,
+            textarea,
+            select {
+                padding: 5px;
+                background-color: #ffffffc2;
+                border: 2px solid white;
+                outline: none;
+                margin: 3px;
+                font-size: 18px;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+            }
+            textarea {
+                max-height: 104px;
+                min-height: 104px;
+                max-width: 228px;
+                min-width: 228px;
+            }
+            button {
+                background-color: #eb2828;
+                float: left;
+                width: max-content;
+                padding: 5px 15px;
+                font-size: 18px;
+                color: #fff;
+                margin-top: 5px;
+                font-weight: 600;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+            }
+        }
+       
+    }
+}
+.ViewTransaction{
+    height: 30em !important;
+}
+.right,.ViewTransaction {
+    height: 23em;
+    width: 65%;
+    overflow-y: scroll;
+    align-items: center;
+    &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(182, 181, 181);
+    }
+    .card {
+        height: 5em;
+        margin: 10px 0;
+        background-color: #ffffffc2;
+        width: 90%;
+        padding: 5px;
+        border-radius: 10px;
+        border: 2px solid white;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .Icon {
+            padding: 5px;
+            background-color: #ffffffc2;
+            border-radius: 10px;
+            border: 2px solid white;
+            cursor: pointer;
+
+        }
+        .icon {
+            width: 4em;
+            height: 4em;
+            font-size: 12px;
+        }
+        .details {
+            width: 25em;
+            height: 4em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            .upper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .expense{
+                    margin: 0 5px;
+                    background-color: rgb(236, 20, 13);
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                
+                }
+                .income {
+                    margin: 0 5px;
+                    background-color: green;
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                }
+            }
+            .lower {
+                display: flex;
+                flex-direction: row;
+                div{
+                    margin: 2px 10px;
+                }
+            }
+        }
+        .delete {
+            font-size: 40px;
+            cursor: pointer;
+
+        }
+    }
+}

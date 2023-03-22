@@ -1,0 +1,248 @@
+// For Laptop Or Desktop
+.Navbar {
+    background-color: #757575;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    .MainNavbar {
+        display: flex;
+        margin: 0 15px;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        .Logo {
+            cursor: pointer;
+            padding: 0 15px;
+            .LogoName1 {
+                font-size: 28px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: #fff;
+                background-color: #000;
+                padding-left: 15px;
+                padding-right: 2px;
+                -webkit-border-top-left-radius: 20px;
+                -webkit-border-bottom-left-radius: 20px;
+                -moz-border-radius-topleft: 20px;
+                -moz-border-radius-bottomleft: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+            .LogoName2 {
+                background-color: #fff;
+                letter-spacing: 2px;
+                font-size: 25px;
+                margin-left: 2px;
+                color: #000;
+                padding-right: 15px;
+                padding-left: 2px;
+                padding-bottom: 3px;
+                -webkit-border-top-right-radius: 20px;
+                -webkit-border-bottom-right-radius: 20px;
+                -moz-border-radius-topright: 20px;
+                -moz-border-radius-bottomright: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+        .serach {
+            width: fit-content;
+
+            input {
+                padding: 5px;
+                width: 20em;
+                border: none;
+                font-size: 15px;
+                outline: none;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+            }
+        }
+        .active {
+            color: #0a0a0a !important;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            padding: 0 10px;
+
+            .HomeIcon {
+                padding-top: 2px;
+                margin-left: 20px;
+                font-size: 28px !important;
+            }
+            .link {
+                cursor: pointer;
+                font-family: "Bebas Neue", cursive;
+                letter-spacing: 2px;
+                margin: 0 10px;
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 550;
+                &:hover {
+                    color: #0f0f0f;
+                }
+            }
+        }
+        .TopIcons{
+            display: flex;
+            flex-direction: row;
+        }
+        .Account {
+            padding-top: 2px;
+            margin-left: 20px;
+            font-size: 30px !important;
+            color: #fff;
+        }
+        .tracker{
+                cursor: pointer;
+                margin: 2px 10px;
+                color: #fff;
+                text-decoration: none;
+                font-size: 30px;
+                &:hover {
+                    color: #0f0f0f;
+                }
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .Navbar {
+        .MainNavbar {
+            margin: 0 1px;
+            .links {
+                letter-spacing: 1px;
+                margin: 0 0;
+                font-size: 18px;
+                font-weight: 550;
+                .link {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .serach {
+        width: fit-content;
+        input {
+            width: 15em !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .Navbar {
+        .MainNavbar {
+            .Logo {
+                cursor: pointer;
+                padding: 0 15px;
+                .LogoName1 {
+                    font-size: 23px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    color: #fff;
+                }
+                .LogoName2 {
+                    letter-spacing: 2px;
+                    font-size: 20px;
+                    margin-left: 2px;
+                    color: #200401;
+                }
+            }
+            margin: 0 1px;
+            .links {
+                margin-right: -5px;
+                .link {
+                    font-size: 15px;
+                    font-weight: 550;
+                    margin: 0 5px;
+                }
+            }
+            .Account {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 875px) {
+    .Navbar {
+        padding: 0 15px;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        .Logo {
+            .LogoName1 {
+                font-size: 28px !important;
+            }
+            .LogoName2 {
+                font-size: 25px !important;
+            }
+        }
+        .links {
+            z-index: 5;
+            width: 100vw !important;
+            position: fixed;
+            bottom: 0;
+            background-color: #757575;
+            display: flex;
+            align-items: center;
+            justify-content: space-around !important;
+            left: 0;
+            right: 0;
+            .link {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .Navbar {
+        height: 80px;
+        .MainNavbar {
+            padding: 5px 0;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between !important;
+
+            .TopIcons {
+                position: absolute;
+                top: 22px !important;
+                right: 5px !important;
+            }
+            .links{
+                z-index: 10;
+            }
+            .HomeIcon {
+                z-index: 5 !important;
+                position: absolute;
+                bottom: 18px;
+                left: -5px;
+                background-color: #757575;
+                padding: 5px 5px 0px 8px;
+                -webkit-border-top-right-radius: 20px;
+                -moz-border-radius-topright: 20px;
+                border-top-right-radius: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    .HomeIcon{
+      
+        bottom: 38px !important;
+    }
+}

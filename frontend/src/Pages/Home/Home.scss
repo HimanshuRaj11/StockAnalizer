@@ -1,0 +1,80 @@
+.HomeContainer {
+    position: relative;
+    height: auto;
+    width: 100%;
+    top: 50px;
+    .homeTopContainer {
+        background-image: url("../../../public/Assets/img/bg1.jpg");
+        background-size: cover;
+        height: 92vh;
+        .homeTop {
+            height: 92vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.404);
+            .headerLine {
+                font-size: 40px;
+                font-weight: 1000;
+                color: #fff;
+                width: 50%;
+                text-align: center;
+                text-shadow: 1px 1px 14px rgba(0, 0, 0, 1);
+                margin: 10px;
+            }
+            .detailLine {
+                text-align: center;
+                margin: 10px;
+                font-size: 20px;
+                color: #dddbdb;
+                font-weight: 600;
+                width: 60%;
+                text-shadow: 1px 1px 14px rgba(0, 0, 0, 1);
+            }
+            .getStart {
+                width: max-content;
+                margin: 10px;
+                padding: 10px 20px;
+                font-weight: 1000;
+                cursor: pointer;
+                font-size: 18px;
+                border: none;
+                background-color: #fff;
+                color: rgb(26, 178, 248);
+                border-radius: 20px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                -ms-border-radius: 20px;
+                -o-border-radius: 20px;
+            }
+        }
+    }
+
+    .homeSecondComponent{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: red;
+        .secondLeft{
+            display: flex;
+            width: 50%;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: aqua;
+            .HomeCard{
+                height: 30em;
+                width: 18em;
+                background-color: yellow;
+                margin: 10px;
+            }
+        }
+
+        .secondRight{
+            background-color: rgb(86, 131, 56);
+            width: 45%;
+
+        }
+    }
+}

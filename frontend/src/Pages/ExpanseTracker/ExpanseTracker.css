@@ -1,0 +1,349 @@
+.TrackerContainer {
+  position: relative;
+  height: auto;
+  width: 100%;
+  top: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.TrackerContainer .sidebar {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  height: 33em;
+  width: 20%;
+  padding: 20px 10px;
+  background-color: rgba(182, 179, 179, 0.274);
+  border-radius: 10px;
+  box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+  -webkit-box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+  -moz-box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+}
+.TrackerContainer .sidebar .profile {
+  width: 100%;
+  height: 7em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.TrackerContainer .sidebar .profile .pic {
+  height: 90px;
+  width: 90px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+  margin: 0 5px 0 0;
+  cursor: pointer;
+}
+.TrackerContainer .sidebar .profile .pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 95px;
+  width: 95px;
+  padding: 0 9px 2px 0;
+}
+.TrackerContainer .sidebar .profile .intro {
+  margin-right: 5px;
+}
+.TrackerContainer .sidebar .profile .intro h2 {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(3, 2, 97);
+}
+.TrackerContainer .sidebar .profile .intro h3 {
+  cursor: pointer;
+  color: rgb(68, 86, 146);
+}
+.TrackerContainer .sidebar .menu {
+  width: 100%;
+}
+.TrackerContainer .sidebar .menu .menuLists {
+  display: flex;
+  flex-direction: column;
+}
+.TrackerContainer .sidebar .menu .menuLists .menuList {
+  cursor: pointer;
+  list-style: none;
+  font-size: 18px;
+  color: rgb(68, 86, 146);
+  font-weight: 600;
+  margin: 10px 5px;
+  padding-left: 3px;
+  border-left: 3px solid rgba(255, 255, 255, 0);
+}
+.TrackerContainer .sidebar .menu .menuLists .menuList:hover {
+  color: rgb(3, 2, 97);
+  font-weight: 700;
+  border-left: 3px solid rgb(3, 2, 97);
+}
+.TrackerContainer .sidebar .menu .menuLists .active {
+  border-left: 3px solid rgb(3, 2, 97);
+  color: rgb(3, 2, 97);
+  font-weight: 700;
+}
+.TrackerContainer .mainBox {
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  height: 33em;
+  padding: 10px 10px;
+  width: 75%;
+  background-color: rgba(182, 179, 179, 0.274);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+  -webkit-box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+  -moz-box-shadow: 1px 2px 34px -2px rgba(209, 206, 206, 0.74);
+}
+.TrackerContainer .mainBox .DashboadContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.TrackerContainer .mainBox .DashboadContainer .left {
+  height: 33em;
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+}
+.TrackerContainer .mainBox .DashboadContainer .left h1 {
+  font-weight: 900;
+  color: rgb(3, 2, 97);
+  letter-spacing: 2px;
+  font-size: 45px;
+  margin: -5px;
+}
+.TrackerContainer .mainBox .DashboadContainer .left .chart {
+  background-color: rgba(255, 255, 255, 0.7607843137);
+  width: 95%;
+  height: 15em;
+  border: 2px solid white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+.TrackerContainer .mainBox .DashboadContainer .left .transDetail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.TrackerContainer .mainBox .DashboadContainer .left .transDetail .total {
+  cursor: pointer;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.7607843137);
+  border: 2px solid white;
+  width: 40%;
+  height: 6em;
+  padding-left: 10px;
+}
+.TrackerContainer .mainBox .DashboadContainer .left .transDetail .total h2 {
+  color: rgb(3, 2, 97);
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+.TrackerContainer .mainBox .DashboadContainer .left .transDetail .total div {
+  word-spacing: 5px;
+  color: rgb(68, 86, 146);
+  font-size: 50px;
+}
+.TrackerContainer .mainBox .DashboadContainer .right {
+  width: 38%;
+  height: 33em;
+}
+
+.IncomContainer h1 {
+  font-weight: 900;
+  color: rgb(3, 2, 97);
+  letter-spacing: 2px;
+  font-size: 45px;
+  margin: -5px 5px;
+}
+.IncomContainer .heading {
+  cursor: pointer;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.7607843137);
+  border: 2px solid white;
+  width: 95%;
+  height: 3em;
+}
+.IncomContainer .heading span {
+  font-weight: 1000;
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+.IncomContainer .mainCont {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.IncomContainer .mainCont .left {
+  max-height: 23em;
+  width: 30%;
+  display: flex;
+  padding: 2px 30px;
+  flex-direction: column;
+}
+.IncomContainer .mainCont .left input,
+.IncomContainer .mainCont .left textarea,
+.IncomContainer .mainCont .left select {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.7607843137);
+  border: 2px solid white;
+  outline: none;
+  margin: 3px;
+  font-size: 18px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.IncomContainer .mainCont .left textarea {
+  max-height: 104px;
+  min-height: 104px;
+  max-width: 228px;
+  min-width: 228px;
+}
+.IncomContainer .mainCont .left button {
+  background-color: #eb2828;
+  float: left;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px 15px;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.ViewTransaction {
+  height: 30em !important;
+}
+
+.right, .ViewTransaction {
+  height: 23em;
+  width: 65%;
+  overflow-y: scroll;
+  align-items: center;
+}
+.right::-webkit-scrollbar, .ViewTransaction::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.right::-webkit-scrollbar-track, .ViewTransaction::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+.right::-webkit-scrollbar-thumb, .ViewTransaction::-webkit-scrollbar-thumb {
+  background: rgb(182, 181, 181);
+}
+.right .card, .ViewTransaction .card {
+  height: 5em;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.7607843137);
+  width: 90%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.right .card .Icon, .ViewTransaction .card .Icon {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.7607843137);
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+.right .card .icon, .ViewTransaction .card .icon {
+  width: 4em;
+  height: 4em;
+  font-size: 12px;
+}
+.right .card .details, .ViewTransaction .card .details {
+  width: 25em;
+  height: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+.right .card .details .upper, .ViewTransaction .card .details .upper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.right .card .details .upper .expense, .ViewTransaction .card .details .upper .expense {
+  margin: 0 5px;
+  background-color: rgb(236, 20, 13);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.right .card .details .upper .income, .ViewTransaction .card .details .upper .income {
+  margin: 0 5px;
+  background-color: green;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.right .card .details .lower, .ViewTransaction .card .details .lower {
+  display: flex;
+  flex-direction: row;
+}
+.right .card .details .lower div, .ViewTransaction .card .details .lower div {
+  margin: 2px 10px;
+}
+.right .card .delete, .ViewTransaction .card .delete {
+  font-size: 40px;
+  cursor: pointer;
+}/*# sourceMappingURL=ExpanseTracker.css.map */
