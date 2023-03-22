@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import axios from 'axios'
 
 
-const BASE_URL = "http://localhost:8000/expanse_tracker/";
+const BASE_URL = "http://localhost:8000/expense_tracker/";
 
 
 const GlobalContext = React.createContext()
@@ -84,8 +84,14 @@ export const GlobalProvider = ({children}) => {
         history.sort((a, b) => {
             return new Date(b.createdAt) - new Date(a.createdAt)
         })
-
         return history.slice(0, 3)
+    }
+    const viewTransaction = () => {
+        const transaction = [...incomes, ...expenses]
+        transaction.sort((a, b) => {
+            return new Date(b.createdAt) - new Date(a.createdAt)
+        })
+        return transaction.slice()
     }
 
 
@@ -104,7 +110,8 @@ export const GlobalProvider = ({children}) => {
             totalBalance,
             transactionHistory,
             error,
-            setError
+            setError,
+            viewTransaction
         }}>
             {children}
         </GlobalContext.Provider>

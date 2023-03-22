@@ -163,7 +163,7 @@
 .TrackerContainer .mainBox .DashboadContainer .left .transDetail .total div {
   word-spacing: 5px;
   color: rgb(68, 86, 146);
-  font-size: 50px;
+  font-size: 30px;
 }
 .TrackerContainer .mainBox .DashboadContainer .right {
   width: 38%;
@@ -271,7 +271,15 @@
 .right::-webkit-scrollbar-thumb, .ViewTransaction::-webkit-scrollbar-thumb {
   background: rgb(182, 181, 181);
 }
-.right .card, .ViewTransaction .card {
+
+.lineHr {
+  margin: 15px 10px;
+  padding: 1px;
+  background-color: rgb(3, 2, 97);
+  border: none;
+}
+
+.card {
   height: 5em;
   margin: 10px 0;
   background-color: rgba(255, 255, 255, 0.7607843137);
@@ -288,19 +296,19 @@
   justify-content: space-around;
   align-items: center;
 }
-.right .card .Icon, .ViewTransaction .card .Icon {
+.card .Icon {
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.7607843137);
   border-radius: 10px;
   border: 2px solid white;
   cursor: pointer;
 }
-.right .card .icon, .ViewTransaction .card .icon {
+.card .icon {
   width: 4em;
   height: 4em;
   font-size: 12px;
 }
-.right .card .details, .ViewTransaction .card .details {
+.card .details {
   width: 25em;
   height: 4em;
   display: flex;
@@ -309,12 +317,12 @@
   font-size: 18px;
   cursor: pointer;
 }
-.right .card .details .upper, .ViewTransaction .card .details .upper {
+.card .details .upper {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.right .card .details .upper .expense, .ViewTransaction .card .details .upper .expense {
+.card .details .upper .expense {
   margin: 0 5px;
   background-color: rgb(236, 20, 13);
   height: 10px;
@@ -325,7 +333,7 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.right .card .details .upper .income, .ViewTransaction .card .details .upper .income {
+.card .details .upper .income {
   margin: 0 5px;
   background-color: green;
   height: 10px;
@@ -336,14 +344,56 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.right .card .details .lower, .ViewTransaction .card .details .lower {
+.card .details .lower {
   display: flex;
   flex-direction: row;
 }
-.right .card .details .lower div, .ViewTransaction .card .details .lower div {
+.card .details .lower div {
   margin: 2px 10px;
 }
-.right .card .delete, .ViewTransaction .card .delete {
+.card .delete {
   font-size: 40px;
   cursor: pointer;
+}
+
+ChartStyled {
+  background: #FCF6F9;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.history-con {
+  grid-column: 4/-1;
+}
+.history-con h2 {
+  cursor: pointer;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.history-con .salary-title {
+  cursor: pointer;
+  font-size: 1rem;
+}
+.history-con .salary-title span {
+  font-size: 1rem;
+}
+.history-con .salary-item {
+  background: #FCF6F9;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.history-con .salary-item p {
+  font-weight: 600;
+  font-size: 1rem;
 }/*# sourceMappingURL=ExpanseTracker.css.map */

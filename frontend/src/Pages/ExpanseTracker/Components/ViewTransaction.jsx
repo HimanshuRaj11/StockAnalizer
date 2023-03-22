@@ -1,37 +1,48 @@
-import React from "react";
-import { MdDelete } from "react-icons/md";
-import { FaComment } from "react-icons/fa";
-import { BsCalendarMinusFill } from "react-icons/bs";
-import { FaBitcoin } from "react-icons/fa";
+import React,{useEffect} from "react";
+import {FaComment} from 'react-icons/fa'
+import {BsCalendarMinusFill} from 'react-icons/bs'
+import {FaBitcoin} from 'react-icons/fa'
+
+import Moment from 'react-moment';
+import "react-datepicker/dist/react-datepicker.css";
+import { useGlobalContext } from "../../../Context/Expance";
 export default function ViewTransaction() {
+  const {viewTransaction,getIncomes,getExpenses} = useGlobalContext()
+  const [...transaction] = viewTransaction()
+  useEffect(() => {
+    getIncomes();
+    getExpenses();
+  }, []);
   return (
     <div className="ViewTransaction">
       <h1 className="Font4">View Transaction</h1>
-      <div className="card">
-        <div className="Icon">
-          <FaBitcoin className="icon" />
-        </div>
-        <div className="details">
-          <div className="upper">
-            <span className="redDot"> </span>
-            <span className="tital Font1">Salary</span>
-          </div>
-          <div className="lower">
-            <div className="Amount Font1">$ 400</div>
-            <div className="Date">
-              {" "}
-              <BsCalendarMinusFill /> 21/52/2008
-            </div>
-            <div className="msg Font1">
-              <FaComment /> My first Income
-            </div>
-          </div>
-        </div>
-        <div className="delete">
-          {" "}
-          <MdDelete />{" "}
-        </div>
-      </div>
+
+      {transaction.map((item) => {
+            const { _id, title, amount, date, category, description, type } = item;
+            return (
+              <div className="card" key={_id} id={_id}>
+                <div className="Icon">
+                  <FaBitcoin className="icon" />
+                </div>
+                <div className="details">
+                  <div className="upper">
+                    <span className={`${type}`}> </span>
+                    <span className="tital Font1">{title}</span>
+                  </div>
+                  <div className="lower">
+                    <div className="Amount Font1">$ {amount} </div>
+                    <div className="Date">
+                      <BsCalendarMinusFill style={{ margin: "0 5px" }} />
+                      <Moment format="DD MMM YYYY">{date}</Moment>
+                    </div>
+                    <div className="msg Font1">
+                      <FaComment /> {description}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
     </div>
   );
 }

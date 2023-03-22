@@ -22,7 +22,7 @@ export default function Navbar() {
                 <NavLink className='link' to="course">COURSE</NavLink>
             </div>
             <div className="TopIcons">
-            <NavLink className='link tracker' to='/expanse_tracker/Dashboad'><MdDashboard /></NavLink>
+            <NavLink className='link tracker' to='/expense_tracker/Dashboad'><MdDashboard /></NavLink>
             <NavLink className='link Account' to='/account'><MdAccountCircle /></NavLink>
             </div>
         </div>

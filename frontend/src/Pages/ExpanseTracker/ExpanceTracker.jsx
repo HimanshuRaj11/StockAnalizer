@@ -20,10 +20,10 @@ export default function ExpanceTracker() {
         </div>
         <div className="menu">
           <ul className="menuLists">
-           <NavLink to='/expanse_tracker/Dashboad' className={`menuList Font3 `}> <AiFillDashboard className='menuListIcon' /> Dashboard</NavLink>
-           <NavLink to="/expanse_tracker/ViewTransection" className={`menuList Font3`}> <BsCreditCardFill className='menuListIcon'/> View Transactions</NavLink>
-           <NavLink to="/expanse_tracker/income" className={`menuList Font3`}> <GiTakeMyMoney className='menuListIcon' /> Incomes</NavLink>
-           <NavLink to="/expanse_tracker/expanse" className={`menuList Font3`}><GiMoneyStack className='menuListIcon' /> Expances</NavLink>
+           <NavLink to='/expense_tracker/Dashboad' className={`menuList Font3 `}> <AiFillDashboard className='menuListIcon' /> Overview</NavLink>
+           <NavLink to="/expense_tracker/ViewTransection" className={`menuList Font3`}> <BsCreditCardFill className='menuListIcon'/> View Transactions</NavLink>
+           <NavLink to="/expense_tracker/income" className={`menuList Font3`}> <GiTakeMyMoney className='menuListIcon' /> Incomes</NavLink>
+           <NavLink to="/expense_tracker/expense" className={`menuList Font3`}><GiMoneyStack className='menuListIcon' /> Expences</NavLink>
           </ul>
         </div>
       </div>

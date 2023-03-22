@@ -15,11 +15,11 @@ function App() {
 
       <Routes>
       <Route excat path="/" element={<Home/>} />
-      <Route excat path="expanse_tracker" element={<ExpanceTracker/>} >
+      <Route excat path="expense_tracker" element={<ExpanceTracker/>} >
         <Route excat path="Dashboad" element={<Dashboad/>} />
         <Route excat path="ViewTransection" element={<ViewTransaction />}/>
         <Route excat path="income" element={<Income/>} />
-        <Route excat path="expanse" element={<Expanse/>} />
+        <Route excat path="expense" element={<Expanse/>} />
       </Route>
 
       </Routes>
