@@ -6,7 +6,6 @@ const auth = require("../Middleware/auth")
 
 exports.SignIn = async (req, res) => {
   const { name, username, email, mobile, password, confirmPassword } = req.body;
-  console.log(req.body);
   try {
     if (!name || !username || !email || !password) {
       return req.status(400).json({ message: "All fields are required!" });
@@ -27,7 +26,6 @@ exports.SignIn = async (req, res) => {
       const token = await NewUser.genToken();
       const createdUser = await NewUser.save();
       res.status(200).json({ createdUser, token });
-      console.log(createdUser);
     }
   } catch (error) {
     res.status(500).json({ message: error });
@@ -46,7 +44,6 @@ exports.Login = async (req, res) => {
       password,
       findUseremail.password
     );
-    console.log(verifyUser);
     if (verifyUser) {
       const token = await findUseremail.genToken();
       return res.status(200).json({ message: findUseremail });
@@ -64,15 +61,14 @@ exports.logout = async (req, res) => {
   const parseCookie = JSON.parse(Cookie)
   try {
     const verifyToken = await jwt.verify(parseCookie, process.env.secretJwtKey)
-    console.log(verifyToken);
-    // req.user.token = req.user.token.filter((element)=>{
-    //   return element.token !== req.token
-    // })
-    // req.user.save();
-
+    const user = await User.findOne({_id: verifyToken._id})
+    user.tokens = user.tokens.filter((element)=>{
+      return element.token !== parseCookie
+    })
+    user.save();
     res.status(200).json({message:"Logout Success"})
   } catch (error) {
-    // console.log(error);
+    console.log(error);
   }
 
 };

@@ -1,9 +1,9 @@
 import "./Register.css";
-import { NavLink, redirect } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import  SetCookie  from "../../Hooks/SetCookie";
 export default function Register() {
-
+const navigate = useNavigate()
   const [user, setUser] =useState({
     name:"", username:"", email:"",mobile:"", password:"", confirmPassword:""
   })
@@ -30,15 +30,14 @@ export default function Register() {
       }).then((res)=>res.json())
       .then((data)=>{
         SetCookie('FinFriend', JSON.stringify(data.token))
-        console.log(data.token);
+        navigate('/')
       })
-      redirect('/')
   } else {
       alert("invlid input")
   }
-//   setUser({
-//     username:"", email:"", password:"", confirmPassword:""
-//   })
+  setUser({
+    name:"", username:"", email:"",mobile:"", password:"", confirmPassword:""
+  })
 }
   return (
     <div className="RegisterContainer">

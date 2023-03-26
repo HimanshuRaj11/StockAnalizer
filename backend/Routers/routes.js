@@ -6,7 +6,7 @@ const auth = require("../Middleware/auth")
 
 router.post('/signin',SignIn)
 router.post('/login',Login)
-router.post('/logout',auth,logout)
+router.post('/logout',logout)
 
 
 router.post('/expense_tracker/add-income', addIncome)

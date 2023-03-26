@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink , useNavigate} from "react-router-dom";
 import "./Navbar.css";
 import { ImHome } from "react-icons/im";
 import { MdAccountCircle, MdDashboard } from "react-icons/md";
@@ -7,6 +7,7 @@ import GetCookie from "../../Hooks/GetCookie";
 import RemoveCookie from "../../Hooks/RemoveCookie";
 
 export default function Navbar() {
+  const navigate = useNavigate()
   const [Cookie, setCookie] = useState(null);
   const logout =()=>{
     fetch("http://localhost:8000/logout",{
@@ -21,18 +22,13 @@ export default function Navbar() {
         })
       }).then((res)=>res.json())
       .then((data)=>{
-        // RemoveCookie('FinFriend')
+        RemoveCookie('FinFriend')
+        navigate('/')
       })
   }
   useEffect(() => {
-    fetch('http://localhost:8000', {
-      method: 'GET',
-      credentials: 'include'
-    })
     const cookie = GetCookie("FinFriend");
     setCookie(cookie);
-    document.cookie = cookie;
-    console.log(cookie);
   }, []);
   return (
     <>

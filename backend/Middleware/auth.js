@@ -4,6 +4,8 @@ const User = require("../Models/Users");
 
 const auth = async (req,res,next)=>{
     try {
+        const cooki = req.cookies
+        console.log(cooki);
         console.log("-----");
         const token = req.cookies.FinFriend;
         const verifyToken = await jwt.verify(token, process.env.secretJwtKey)
