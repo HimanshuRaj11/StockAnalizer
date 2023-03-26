@@ -59,7 +59,6 @@ export const GlobalProvider = ({children}) => {
 
     const deleteExpense = async (id) => {
         const res  = await axios.delete(`${BASE_URL}delete-expense/${id}`)
-        console.log(id);
         getExpenses()
     }
 

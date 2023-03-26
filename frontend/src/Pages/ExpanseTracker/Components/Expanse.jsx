@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { MdDelete } from "react-icons/md";
 import { FaComment } from "react-icons/fa";
 import { BsCalendarMinusFill } from "react-icons/bs";
-import { FaBitcoin } from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Moment from "react-moment";
 import { useGlobalContext } from "../../../Context/Expance";
-
+import {SiCommerzbank} from 'react-icons/si'
 export default function Expanse() {
   const { expenses, getExpenses,deleteExpense, totalExpenses } = useGlobalContext();
   useEffect(() => {
@@ -118,7 +117,7 @@ export default function Expanse() {
             return (
               <div className="card" key={_id} id={_id}>
                 <div className="Icon">
-                  <FaBitcoin className="icon" />
+                  <SiCommerzbank className="icon" />
                 </div>
                 <div className="details">
                   <div className="upper">

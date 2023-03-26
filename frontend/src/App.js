@@ -7,6 +7,9 @@ import Dashboad from './Pages/ExpanseTracker/Components/Dashboad';
 import ViewTransaction from './Pages/ExpanseTracker/Components/ViewTransaction';
 import Income from './Pages/ExpanseTracker/Components/Income';
 import Expanse from './Pages/ExpanseTracker/Components/Expanse';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
+
 function App() {
   return (
     <>
@@ -15,6 +18,8 @@ function App() {
 
       <Routes>
       <Route excat path="/" element={<Home/>} />
+      <Route excat path="/register" element={<Register/>} />
+      <Route excat path="/login" element={<Login/>} />
       <Route excat path="expense_tracker" element={<ExpanceTracker/>} >
         <Route excat path="Dashboad" element={<Dashboad/>} />
         <Route excat path="ViewTransection" element={<ViewTransaction />}/>

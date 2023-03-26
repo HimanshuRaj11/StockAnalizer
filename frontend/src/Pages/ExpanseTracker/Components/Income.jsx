@@ -2,12 +2,12 @@ import React,{useState, useEffect} from 'react'
 import {MdDelete} from 'react-icons/md'
 import {FaComment} from 'react-icons/fa'
 import {BsCalendarMinusFill} from 'react-icons/bs'
-import {FaBitcoin} from 'react-icons/fa'
+import {SiCommerzbank} from 'react-icons/si'
 import DatePicker from "react-datepicker";
-
 import Moment from 'react-moment';
 import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from "../../../Context/Expance";
+
 export default function Income() {
     const {addIncome,incomes, getIncomes, deleteIncome, totalIncome,setError, error} = useGlobalContext()
     useEffect(() =>{
@@ -49,6 +49,14 @@ export default function Income() {
         </div>
         <div className="mainCont">
             <div className="left">
+            {error && (
+            <p
+              className="error Font4"
+              style={{ color: "rgb(236, 25, 33)", fontWeight: "800" }}
+            >
+              {error}
+            </p>
+          )}
                 <input type="text" 
                     value={title}
                     name={'title'} 
@@ -89,7 +97,7 @@ export default function Income() {
             return(
               <div className="card" key={_id} id={_id}>
                 <div className="Icon">
-                  <FaBitcoin className="icon" />
+                  <SiCommerzbank className="icon" />
                 </div>
                 <div className="details">
                   <div className="upper">

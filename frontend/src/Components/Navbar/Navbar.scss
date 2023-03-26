@@ -92,9 +92,29 @@
                 }
             }
         }
-        .TopIcons{
+        .TopIcons {
             display: flex;
             flex-direction: row;
+            .auth {
+                border: 2px rgb(41, 40, 40) solid;
+                outline: none;
+                font-weight: 800;
+                background-color: #fff;
+                color: #000;
+                font-size: 18px;
+                padding: 5px;
+                margin: 0 5px;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                height: 35px;
+            }
+            .active{
+                background-color: #000;
+                color: #fff !important;
+            }
         }
         .Account {
             padding-top: 2px;
@@ -102,15 +122,15 @@
             font-size: 30px !important;
             color: #fff;
         }
-        .tracker{
-                cursor: pointer;
-                margin: 2px 10px;
-                color: #fff;
-                text-decoration: none;
-                font-size: 30px;
-                &:hover {
-                    color: #0f0f0f;
-                }
+        .tracker {
+            cursor: pointer;
+            margin: 2px 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 30px;
+            &:hover {
+                color: #0f0f0f;
+            }
         }
     }
 }
@@ -221,7 +241,7 @@
                 top: 22px !important;
                 right: 5px !important;
             }
-            .links{
+            .links {
                 z-index: 10;
             }
             .HomeIcon {
@@ -240,9 +260,7 @@
 }
 
 @media only screen and (max-width: 370px) {
-
-    .HomeIcon{
-      
+    .HomeIcon {
         bottom: 38px !important;
     }
 }

@@ -97,6 +97,26 @@
   display: flex;
   flex-direction: row;
 }
+.Navbar .MainNavbar .TopIcons .auth {
+  border: 2px rgb(41, 40, 40) solid;
+  outline: none;
+  font-weight: 800;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  height: 35px;
+}
+.Navbar .MainNavbar .TopIcons .active {
+  background-color: #000;
+  color: #fff !important;
+}
 .Navbar .MainNavbar .Account {
   padding-top: 2px;
   margin-left: 20px;
